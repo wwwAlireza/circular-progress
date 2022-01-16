@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --percent: 20%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #212526;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border: 15px solid rgba(255, 255, 255, 0.1);
+}
+
+.wrapper .circle {
+  width: inherit;
+  height: inherit;
+  border: 15px solid darkcyan;
+  border-radius: 50%;
+  -webkit-mask: conic-gradient(from 2deg, transparent 0 var(--percent), #000 0 100%, transparent 0 100%);
+          mask: conic-gradient(from 2deg, transparent 0 var(--percent), #000 0 100%, transparent 0 100%);
+  position: absolute;
+}
+
+.wrapper #percent-value {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9rem;
+  position: absolute;
+}
+
+#percent-input {
+  margin-top: 20px;
+  -webkit-appearance: none;
+  width: 140px;
+  height: 10px;
+  outline: none !important;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#percent-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 30px;
+  outline: none;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+#percent-input:active::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.6);
+          box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.6);
+}
+/*# sourceMappingURL=main.css.map */
